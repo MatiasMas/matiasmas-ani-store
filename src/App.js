@@ -1,11 +1,13 @@
 import './App.css';
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
+
 
 const App = () => {
     return (
         <>
-            <NavBar/>
-            <h1>Hello world!</h1>
+            <NavBar dynamicOption={'Discover'} />
+            <ItemListContainer message={'Bienvenido a Ani-Store donde podras encontrar todo aquello que deseas!'}/>
         </>
     );
 }

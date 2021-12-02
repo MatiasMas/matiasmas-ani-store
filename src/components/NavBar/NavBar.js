@@ -1,11 +1,15 @@
-const NavBar = () => {
+import './NavBar.css';
+import CartWidget from "../CartWidget";
+
+const NavBar = (props) => {
     return (
         <nav>
             <span>AniStore</span>
             <ul>
-                <a href="#">Highlights</a>
+                <a href="#">{props.dynamicOption}</a>
                 <a href="#">Login</a>
                 <a href="#">Register</a>
+                <CartWidget number={4}/>
             </ul>
         </nav>
     );

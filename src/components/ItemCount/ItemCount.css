@@ -1,0 +1,27 @@
+.counter {
+    width: 200px;
+    margin: auto;
+}
+
+.counterBox {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+
+.counterProductName {
+    padding-left: 10px;
+}
+
+.counterButtons {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.counterAddProductsButton {
+    width: 100%;
+}

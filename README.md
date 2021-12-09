@@ -18,3 +18,4 @@ Si realizaste cambios en los archivos de sass, para recompilar el css utiliza el
 - 0.1.0: Se adiciona el directorio components incluyendo una NavBar muy basica para el primer desafio.
 - 0.1.1: Creacion de CartWidget e ItemListContainer, por ahora sin estilos, desafio.
 - 0.2.0: Se trabaja en el componente ItemCount para el desafio, el mismo se llama desde ItemListContainer. 
+- 0.2.0: Creacion de ItemListContainer, ItemList e Item para el desafio del Catalogo con Maps y promises.

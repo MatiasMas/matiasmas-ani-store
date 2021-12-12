@@ -1,4 +1,4 @@
-import './Item.css'
+import './Item.css';
 import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({product}) => {
@@ -17,7 +17,7 @@ const Item = ({product}) => {
             <p className="Info">
                 Price: {product.price}
             </p>
-            <ItemCount actualStock={product.stock} minimumStock={1} name={'Batman Figure 1/3 scale'} />
+            <ItemCount actualStock={product.stock} minimumStock={product.minimumStock} name={product.name} />
             <button className='detailsButton'>Details</button>
         </div>
     );

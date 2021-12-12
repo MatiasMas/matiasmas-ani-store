@@ -3,7 +3,7 @@ import './ItemCount.css';
 
 const ItemCount = (props) => {
 
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(props.minimumStock);
 
     const extractCount = () => {
         if (count > props.minimumStock) {
@@ -17,7 +17,7 @@ const ItemCount = (props) => {
         }
     }
 
-    const addingProductsCount = () => {
+    const onAdd = () => {
         console.log(`Ingresaste ${count} productos`);
     }
 
@@ -25,14 +25,13 @@ const ItemCount = (props) => {
     return (
         <div className={'counter'}>
             <div className={'counterBox'}>
-                <p className={'counterProductName'}>{props.name}</p>
                 <div className={'counterButtons'}>
-                    <button onClick={extractCount}>-</button>
+                    <button disabled={props.minimumStock === 0} onClick={extractCount}>-</button>
                     <p>{count}</p>
-                    <button onClick={addCount}>+</button>
+                    <button disabled={props.minimumStock === 0} onClick={addCount}>+</button>
                 </div>
             </div>
-            <button className={'counterAddProductsButton'} onClick={addingProductsCount} type='button'>Add to Cart</button>
+            <button disabled={props.minimumStock === 0} className={'counterAddProductsButton'} onClick={onAdd} type='button'>Add to Cart</button>
         </div>
     );
 }

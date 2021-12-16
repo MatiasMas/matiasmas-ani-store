@@ -1,14 +1,15 @@
 import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
+import {NavLink} from "react-router-dom";
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <nav>
-            <span>AniStore</span>
+            <NavLink to='/'><span>AniStore</span></NavLink>
             <ul>
-                <a href="#">{props.dynamicOption}</a>
-                <a href="#">Login</a>
-                <a href="#">Register</a>
+                <NavLink to='category/games'>Games</NavLink>
+                <NavLink to='category/electronics'>Figures</NavLink>
+                <NavLink to='category/mangas'>Mangas</NavLink>
                 <CartWidget number={4}/>
             </ul>
         </nav>

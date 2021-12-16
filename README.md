@@ -20,3 +20,4 @@ Si realizaste cambios en los archivos de sass, para recompilar el css utiliza el
 - 0.2.0: Se trabaja en el componente ItemCount para el desafio, el mismo se llama desde ItemListContainer. 
 - 0.2.1: Creacion de ItemListContainer, ItemList e Item para el desafio del Catalogo con Maps y promises.
 - 0.3.0: Se adiciona bootstrap, se crea ItemDetailContainer e ItemDetail para el desafio semanal.
+- 0.4.0: En esta iteracion se adiciono el uso de Routing, ahora desde la lista de items se puede acceder a los items individuales, para ello se usaron Link del react-router-dom y para la Navbar se usaron NavLink.

@@ -1,10 +1,12 @@
 import {useEffect, useState} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
+import {useParams} from "react-router-dom";
 
 const ItemDetailContainer = () => {
 
     const [detailedProduct, setDetailedProduct] = useState({});
+    let {params} = useParams();
 
     const detailedProductJSON =
         {
@@ -28,7 +30,6 @@ const ItemDetailContainer = () => {
             ]
         }
 
-
     const getItem = () => {
         return new Promise((resolve, reject) => {
 
@@ -42,6 +43,7 @@ const ItemDetailContainer = () => {
 
         });
     }
+        console.log(params);
 
     useEffect(() => {
 
@@ -55,13 +57,22 @@ const ItemDetailContainer = () => {
             .catch(() => {
                 console.log("Request FAIL");
             });
-    }, []);
+    }, [params]);
 
-    return (
-        <div className={'container detail-container'}>
-            <ItemDetail item={detailedProduct}/>
-        </div>
-    );
+    if (Object.keys(detailedProduct).length === 0){
+        return (
+            <div>
+                <h1>Loading...</h1>
+            </div>
+        );
+    } else {
+        return (
+            <div className={'container detail-container'}>
+                <ItemDetail item={detailedProduct}/>
+            </div>
+        );
+    }
+
 };
 
 export default ItemDetailContainer;

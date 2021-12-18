@@ -1,15 +1,23 @@
 import './ItemDetail.css';
 import {Col, Row} from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
+import {useState} from "react";
+import {Link} from "react-router-dom";
 
 const ItemDetail = ({item}) => {
+
+    const [hideCountComponent, setHideCountComponent] = useState(false);
+
+    const onAdd = (quantityToAdd) => {
+        setHideCountComponent(true);
+    }
 
     return (
         <Row>
             <Col>
                 <img className={'item-detail-img'} src={item.img} alt={item.name}/>
             </Col>
-            <Col  className={'item-detail-overview'}>
+            <Col className={'item-detail-overview'}>
                 <h1>{item.name}</h1>
                 <p className={'item-detail-description'}>{item.description}</p>
                 <Row>
@@ -38,7 +46,9 @@ const ItemDetail = ({item}) => {
                 </Row>
                 <Row>
                     <Col>
-                        <ItemCount actualStock={item.stock} minimumStock={item.minimumStock} name={item.name}/>
+                        {hideCountComponent ?
+                            <Link to={'/cart'} hidden={!hideCountComponent} className={'btn btn-primary'}>Checkout</Link> :
+                            <ItemCount actualStock={item.stock} minimumStock={item.minimumStock} name={item.name} onAdd={onAdd}/>}
                     </Col>
                 </Row>
             </Col>

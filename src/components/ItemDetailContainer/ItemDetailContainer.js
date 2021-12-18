@@ -2,11 +2,21 @@ import {useEffect, useState} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css';
 import {useParams} from "react-router-dom";
+import {db} from "../../firebase/firebase";
+import {collection, getDocs} from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 
+    async function getProductsFromFirebase() {
+        const productsCollection = collection(db, 'products')
+        const productsSnapshot = await getDocs(productsCollection);
+
+        return productsSnapshot.docs.map(doc => doc.data());
+    }
+
+
     const [detailedProduct, setDetailedProduct] = useState({});
-    let {params} = useParams();
+    let {id} = useParams();
 
     const detailedProductJSON =
         {
@@ -43,9 +53,12 @@ const ItemDetailContainer = () => {
 
         });
     }
-        console.log(params);
 
     useEffect(() => {
+        const promiseFirebase = getProductsFromFirebase();
+        promiseFirebase.then((result) => {
+            // console.log(result)
+        });
 
         const promise = getItem();
 
@@ -57,9 +70,9 @@ const ItemDetailContainer = () => {
             .catch(() => {
                 console.log("Request FAIL");
             });
-    }, [params]);
+    }, []);
 
-    if (Object.keys(detailedProduct).length === 0){
+    if (Object.keys(detailedProduct).length === 0) {
         return (
             <div>
                 <h1>Loading...</h1>

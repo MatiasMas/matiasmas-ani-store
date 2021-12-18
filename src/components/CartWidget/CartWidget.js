@@ -1,9 +1,10 @@
 import './CartWidget.css';
+import {Link} from "react-router-dom";
 
 const CartWidget = (props) => {
     return (
         <div>
-            <a href="#"><img className={''} src="cart.png" alt="cart-icon"/></a>
+            <Link to={'/cart'}><img className={''} src="cart.png" alt="cart-icon"/></Link>
             <span>{props.number}</span>
         </div>
     );

@@ -1,62 +1,52 @@
-.CardItem {
-    width: 150px;
-    padding: 30px;
-    margin: 30px;
-    font-size: 10px;
-    background-color: papayawhip;
-    border: 1px solid #e1e1e1;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-.ContainerItem {
+.product-card {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    border-radius: 25px;
-}
-
-.ItemHeader {
-    display: flex;
-    justify-content: center;
-}
-
-.Info {
-    font-size: 16px;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-around;
-}
-
-.Button {
-    width: auto;
-    padding: 12px;
-    font-size: 8px;
-    background: #8C30F5;
-    border-radius: 8px;
-    flex: none;
-    display: flex;
-    order: 1;
-    align-self: center;
-    flex-grow: 0;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-decoration: none;
-    color: #FFFFFF;
-    border: none;
-    border-style: none;
-    cursor: pointer;
-    outline: inherit;
+    text-transform: capitalize;
+    width: 200px;
+    height: 350px;
+    border: #eaeaea solid 1px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    animation: .3s transform;
+    animation-fill-mode: forwards;
 }
 
-.ItemImg {
-    width: 100px;
-    height: 100px;
+.product-card:hover {
+    animation-name: expandOnHover;
+}
+
+.product-card-title {
+    padding: 6px 0;
+    margin: 0;
+    font-size: 20px;
+    color: #5b5b5b;
+}
+
+.product-card-img {
+    max-width: 100%;
+    height: 250px;
     object-fit: cover;
-    object-position: center;
 }
 
-.detailsButton {
-    margin-top: 5px;
-    width: 100%;
+.product-card-price {
+    margin: 0;
+    padding: 6px 0;
+    color: #c93131;
+}
+
+.details-button {
+    width: 210px !important;
+}
+
+@keyframes expandOnHover {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(1.03, 1.03);
+    }
 }

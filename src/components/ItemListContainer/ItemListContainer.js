@@ -2,6 +2,7 @@ import './ItemListContainer.css';
 import ItemList from "../ItemList/ItemList";
 import {useEffect, useState} from "react";
 
+
 const ItemListContainer = (props) => {
 
     const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const ItemListContainer = (props) => {
             name: 'iphone 12',
             price: 1000,
             category: 'electronics',
-            img: 'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.og.jpg?202108061040',
+            img: 'http://ae01.alicdn.com/kf/H2fcb496981474026b7ab87741647f831p.jpg_.webp',
             stock: 25,
             minimumStock: 1,
             description: 'Descripcion de Iphone 12'
@@ -22,7 +23,7 @@ const ItemListContainer = (props) => {
             name: 'samsung s21',
             price: 800,
             category: 'electronics',
-            img: 'https://cdn.pocket-lint.com/r/s/1200x630/assets/images/155378-phones-review-hands-on-samsung-galaxy-s21-ultra-image1-luae09ici4.JPG',
+            img: 'https://qph.fs.quoracdn.net/main-qimg-9ec57820b0ecb331f2bc18b32baac7e0',
             stock: 16,
             minimumStock: 1,
             description: 'Descripcion de Samsung s21'
@@ -32,7 +33,7 @@ const ItemListContainer = (props) => {
             name: 'Ipad 8va',
             price: 1200,
             category: 'electronics',
-            img: 'https://medias.musimundo.com/medias/00406046-143516-143516-01-143516-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1MjI1MnxpbWFnZS9qcGVnfGhjMC9oYWMvMTAyODM0OTc0NTU2NDYvMDA0MDYwNDYtMTQzNTE2LTE0MzUxNl8wMS0xNDM1MTZfMDEuanBnX3NpemU1MTV8MzA0NmMzNGFhZjUwMDY2YjY5MjU0MjlkMGJlYWMxODAxZjE5ODJhZmJlOTczZThmZjE2NTQxMjU5NjE2OTA4Yw',
+            img: 'https://img.joomcdn.net/1f28627d6848920fb6b7e186b5e47874586ae8a0_original.jpeg',
             stock: 0,
             minimumStock: 0,
             description: 'Descripcion de Ipad'
@@ -42,7 +43,7 @@ const ItemListContainer = (props) => {
             name: 'iphone 12',
             price: 1000,
             category: 'electronics',
-            img: 'https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.og.jpg?202108061040',
+            img: 'https://alitools.io/en/showcase/image?url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FH9d9967dbaca542f3804771bd10d4aeef6.jpg',
             stock: 25,
             minimumStock: 1,
             description: 'Descripcion de Iphone 12'
@@ -52,7 +53,7 @@ const ItemListContainer = (props) => {
             name: 'samsung s21',
             price: 800,
             category: 'electronics',
-            img: 'https://cdn.pocket-lint.com/r/s/1200x630/assets/images/155378-phones-review-hands-on-samsung-galaxy-s21-ultra-image1-luae09ici4.JPG',
+            img: 'https://animemotivation.com/wp-content/uploads/2019/12/genos-figure.jpg',
             stock: 16,
             minimumStock: 1,
             description: 'Descripcion de Samsung s21'
@@ -62,7 +63,7 @@ const ItemListContainer = (props) => {
             name: 'Ipad 8va',
             price: 1200,
             category: 'electronics',
-            img: 'https://medias.musimundo.com/medias/00406046-143516-143516-01-143516-01.jpg-size515?context=bWFzdGVyfGltYWdlc3w1MjI1MnxpbWFnZS9qcGVnfGhjMC9oYWMvMTAyODM0OTc0NTU2NDYvMDA0MDYwNDYtMTQzNTE2LTE0MzUxNl8wMS0xNDM1MTZfMDEuanBnX3NpemU1MTV8MzA0NmMzNGFhZjUwMDY2YjY5MjU0MjlkMGJlYWMxODAxZjE5ODJhZmJlOTczZThmZjE2NTQxMjU5NjE2OTA4Yw',
+            img: 'https://m.media-amazon.com/images/I/41WrMKGcfbL._AC_SY450_.jpg',
             stock: 0,
             minimumStock: 0,
             description: 'Descripcion de Ipad'

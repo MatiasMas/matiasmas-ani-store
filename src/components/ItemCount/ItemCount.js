@@ -1,8 +1,10 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import './ItemCount.css';
+import {context} from "../../context/CartContext";
 
-const ItemCount = ({minimumStock, actualStock, onAdd}) => {
+const ItemCount = ({minimumStock, actualStock, onAdd, item}) => {
 
+    const contextValue = useContext(context);
     const [count, setCount] = useState(minimumStock);
 
     const extractCount = () => {
@@ -26,7 +28,11 @@ const ItemCount = ({minimumStock, actualStock, onAdd}) => {
                     <button disabled={minimumStock === 0} onClick={addCount}>+</button>
                 </div>
             </div>
-            <button disabled={minimumStock === 0} className={'counterAddProductsButton'} onClick={() => onAdd(count)} type='button'>Add to Cart</button>
+            <button disabled={minimumStock === 0} className={'counterAddProductsButton'} onClick={() => {
+                onAdd(count);
+                contextValue.addItem(item);
+            }
+            } type='button'>Add to Cart</button>
         </div>
     );
 }

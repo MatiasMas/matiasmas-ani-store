@@ -48,7 +48,7 @@ const ItemDetail = ({item}) => {
                     <Col>
                         {hideCountComponent ?
                             <Link to={'/cart'} hidden={!hideCountComponent} className={'btn btn-primary'}>Checkout</Link> :
-                            <ItemCount actualStock={item.stock} minimumStock={item.minimumStock} name={item.name} onAdd={onAdd}/>}
+                            <ItemCount actualStock={item.stock} minimumStock={item.minimumStock} name={item.name} onAdd={onAdd} item={item}/>}
                     </Col>
                 </Row>
             </Col>

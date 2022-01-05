@@ -16,7 +16,7 @@ const NavBar = () => {
                 />
                 <box-icon type="regular" name="search"/>
                 <NavLink to='category/games'>Games</NavLink>
-                <NavLink to='category/electronics'>Figures</NavLink>
+                <NavLink to='category/figures'>Figures</NavLink>
                 <NavLink to='category/mangas'>Mangas</NavLink>
                 <CartWidget/>
             </ul>

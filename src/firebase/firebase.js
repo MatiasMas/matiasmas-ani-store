@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
+import {collection, getDocs, getFirestore} from "firebase/firestore"
 
 // Setting up the application with my firebase credentials
 const firebaseConfig = {
@@ -10,6 +10,13 @@ const firebaseConfig = {
     messagingSenderId: "476858888855",
     appId: "1:476858888855:web:705f52899831af2c082fd2"
 };
+
+export async function getProductsFromFirebase() {
+    const productsCollection = collection(db, 'products')
+    const productsSnapshot = await getDocs(productsCollection);
+
+    return productsSnapshot.docs.map(doc => doc.data());
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

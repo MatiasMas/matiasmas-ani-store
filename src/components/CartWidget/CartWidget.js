@@ -9,7 +9,7 @@ const CartWidget = (props) => {
 
     return (
         <div className={'cart-container'}>
-            <Link to={'/cart'}><img className={''} src="cart.png" alt="cart-icon"/></Link>
+            <Link className={'cart-link'} to={'/cart'}><box-icon type="regular" name="cart-alt"/></Link>
             <span className={'cartwidget-quantity'}>{contextValue.quantity}</span>
         </div>
     );

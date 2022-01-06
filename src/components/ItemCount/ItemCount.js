@@ -24,7 +24,7 @@ const ItemCount = ({minimumStock, actualStock, onAdd, item}) => {
             <div className={'counterBox'}>
                 <div className={'counterButtons'}>
                     <button disabled={minimumStock === 0} onClick={extractCount}>-</button>
-                    <p>{count}</p>
+                    <p className={'count-number'}>{count}</p>
                     <button disabled={minimumStock === 0} onClick={addCount}>+</button>
                 </div>
             </div>

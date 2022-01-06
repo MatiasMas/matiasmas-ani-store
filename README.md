@@ -25,3 +25,4 @@ Si realizaste cambios en los archivos de sass, para recompilar el css utiliza el
 - 0.4.2: Trabajo realizado en el css para estructurar de forma mas prolija, cambios en NavBar.css e Item.css
 - 0.4.3: Se crea CartContext para manejar el contexto de la aplicacion, CustomProvider colocado en App.
 - 0.5.0: Trabajo fuerte arreglando bugs y mas que nada el pasaje de informacion a ItemDetailContainer, que ahora muestra cada item desde firebase correctamente, las categorias ahora tambien hacen filtrado segun la category de cada item, arreglo en ItemDetail donde se renderizaba antes de tener la informacion de su padre.
+- 0.5.1: Se estructuro la pagina de ItemDetail con estilos mas ordenados, es un primer prototipo.

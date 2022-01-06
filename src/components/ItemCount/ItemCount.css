@@ -1,27 +1,22 @@
-.counter {
-    width: auto;
-    margin: auto;
-}
-
 .counterBox {
-    background-color: lightgrey;
+    background-color: rgba(67, 114, 49, 0.32);
     display: flex;
-    flex-direction: column;
-}
-
-.counterProductName {
-    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .counterButtons {
     display: flex;
     height: 30px;
-    justify-content: center;
     gap: 20px;
-    align-items: center;
 
 }
 
 .counterAddProductsButton {
     width: 100%;
+}
+
+.count-number {
+    font-size: 20px;
 }

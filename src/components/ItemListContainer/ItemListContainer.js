@@ -23,7 +23,6 @@ const ItemListContainer = (props) => {
         promiseFirebase.then((result) => {
             const myItems = getItemsByCategory(category, result);
 
-            console.log(myItems);
             setProducts(myItems);
             console.log("Request OK");
         })

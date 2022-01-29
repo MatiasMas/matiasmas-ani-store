@@ -3,13 +3,12 @@ import {Col, Row} from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import {forEach} from "react-bootstrap/ElementChildren";
 
 const ItemDetail = ({item}) => {
 
     const [hideCountComponent, setHideCountComponent] = useState(false);
 
-    const onAdd = (quantityToAdd) => {
+    const onAdd = () => {
         setHideCountComponent(true);
     }
 
@@ -43,7 +42,7 @@ const ItemDetail = ({item}) => {
                 <Row className={'item-counter'}>
                     <Col>
                         {hideCountComponent ?
-                            <Link to={'/cart'} hidden={!hideCountComponent} className={'btn btn-primary'}>Checkout</Link> :
+                            <Link to={'/cart'} hidden={!hideCountComponent} className={'btn btn-primary checkout-button'}>Checkout</Link> :
                             <ItemCount actualStock={item.stock} minimumStock={item.minimumStock} name={item.name} onAdd={onAdd} item={item}/>}
                     </Col>
                 </Row>

@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import './ItemCount.css';
 import {context} from "../../context/CartContext";
 
@@ -29,9 +29,9 @@ const ItemCount = ({minimumStock, actualStock, onAdd, item}) => {
                 </div>
             </div>
             <button disabled={minimumStock === 0} className={'counterAddProductsButton'} onClick={() => {
-                onAdd(count);
-                contextValue.addItem(item);
-            }
+                onAdd();
+                contextValue.addItem(item, count);
+                }
             } type='button'>Add to Cart</button>
         </div>
     );

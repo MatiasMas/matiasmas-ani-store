@@ -2,15 +2,12 @@
 
 El mismo consiste en una aplicacion web utilizando React JS, entre otras herramientas para construir un E-commerce.
 
-Se trata de una tienda de articulos geek.
+Se trata de una tienda de articulos geek, donde podras comprar juegos, mangas y figuras de anime.
 
 ## Comandos a tener en cuenta
 
-Para arrancar la aplicacion utiliza el siguiente comando:
+Para iniciar la aplicacion utiliza el siguiente comando si es que la clonas localmente:
 ### `npm start`
-
-Si realizaste cambios en los archivos de sass, para recompilar el css utiliza el siguiente comando:
-### `npm run watch-css` 
 
 ## Changelog:
 
@@ -26,3 +23,4 @@ Si realizaste cambios en los archivos de sass, para recompilar el css utiliza el
 - 0.4.3: Se crea CartContext para manejar el contexto de la aplicacion, CustomProvider colocado en App.
 - 0.5.0: Trabajo fuerte arreglando bugs y mas que nada el pasaje de informacion a ItemDetailContainer, que ahora muestra cada item desde firebase correctamente, las categorias ahora tambien hacen filtrado segun la category de cada item, arreglo en ItemDetail donde se renderizaba antes de tener la informacion de su padre.
 - 0.5.1: Se estructuro la pagina de ItemDetail con estilos mas ordenados, es un primer prototipo.
+- 1.0.0: Creacion de pagina Cart, arreglo de excepciones que arrojaba el context.

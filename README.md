@@ -4,6 +4,14 @@ El mismo consiste en una aplicacion web utilizando React JS, entre otras herrami
 
 Se trata de una tienda de articulos geek, donde podras comprar juegos, mangas y figuras de anime.
 
+## Aplicación alojada en netflify
+
+[Ani Store Netlify](https://cranky-hermann-d96001.netlify.app/)
+
+## Flujo básico
+
+![FlujoBasicoApp](public/FlujoEcommerce.gif)
+
 ## Comandos a tener en cuenta
 
 Para iniciar la aplicacion utiliza el siguiente comando si es que la clonas localmente:

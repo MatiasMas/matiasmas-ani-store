@@ -24,7 +24,6 @@ const ItemListContainer = (props) => {
             const myItems = getItemsByCategory(category, result);
 
             setProducts(myItems);
-            console.log("Request OK");
         })
         .catch(() => {
             console.log("Request FAIL");
